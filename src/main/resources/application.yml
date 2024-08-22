@@ -1,12 +1,27 @@
+# Com MySQL
 spring:
   datasource:
-    url: jdbc:h2:mem:estoque
-    username: estoque
-    password:
-    driverClassName: org.h2.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-  h2:
-    console:
-      enabled: true
-      path: /h2
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+# Com H2
+
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:estoque
+#    username: estoque
+#    password:
+#    driverClassName: org.h2.Driver
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2
